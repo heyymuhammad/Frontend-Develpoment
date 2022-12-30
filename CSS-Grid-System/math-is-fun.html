@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math is Fun</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li{
+        display: inline-block;
+        list-style: none;
+        background-color:rgb(0, 0, 106); 
+        border: 1px solid rgb(0, 86, 177);
+        padding: 8px 8px 9px 10px;
+        margin-top: 10px;
+    }
+    .hov{
+        color: white;
+        display: grid;
+        padding: 10px;
+        width: 10%;
+        position: absolute;
+        left: 850px;
+        display: none;
+    }
+    .hov span{
+        padding: 5px 5px;
+        background-color:rgb(0, 0, 106); 
+        border: 1px solid rgb(0, 86, 177);
+    }
+    .hov span{
+        
+        background-color:rgb(0, 0, 106); 
+        border: 1px solid rgb(0, 86, 177);
+    }.hov span:hover{
+        background-color:rgb(0, 86, 177);
+    }
+    ul li:hover{
+        background-color:rgb(0, 86, 177);
+    }
+    i{
+        color: aliceblue;
+        font-size: xx-large;
+        position:relative;
+    }
+    a{
+        text-decoration: none;
+        color: aliceblue;
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+    div.search{
+        border-right: 1px solid rgb(0, 86, 177);
+        border-bottom: 1px solid rgb(0, 86, 177);
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        height: 30px;
+        width: 260px;
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        cursor: text;
+    }
+
+    .magnifier i{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .magnifier input{
+        background-color:rgb(6, 0, 124);
+        padding: 4px;
+    }
+
+    body{
+        background-image: linear-gradient( rgb(0, 0, 100), rgb(22, 22, 113),rgb(15, 15, 45), rgb(15, 15, 45), rgb(15, 15, 45), rgb(15, 15, 45), rgb(15, 15, 45));
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+    }
+    .grid-container{
+        background-color: rgb(3, 3, 65);
+        border-radius: 2rem;
+        margin: auto;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* padding: 10px; */
+        width: 80%;
+        justify-content: center;
+        border: 1.5px solid rgb(0, 225, 255);
+
+    }
+    .grid_item{
+        background-image: linear-gradient(rgb(193, 247, 255), rgb(173, 198, 231));
+        height: 1px;
+        width: 9vw;        
+        border: 1px solid black;
+        box-shadow: 2px 2px 2px rgb(202, 240, 244);
+        padding: 20px 40px 40px 40px;
+        text-align: center;
+        text-align: center;
+        border-radius: 7px;
+        cursor: pointer;
+
+    }
+    .inline{
+        background-image: linear-gradient(rgb(193, 247, 255), rgb(173, 198, 231));
+        height: 1px;
+        width: 9vw;        
+        border: 1px solid black;
+        box-shadow: 2px 2px 2px rgb(202, 240, 244);
+        text-align: center;
+        padding: 20px 40px 40px 40px;
+        margin: auto;
+        border-radius: 7px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        left: 50%;
+    }
+    .grid_item:hover{
+        background-image: linear-gradient(white, gold);
+    }
+    .inline:hover{
+        background-image: linear-gradient(white, gold);
+    }
+    ul li.bar{
+        display: none;
+    }
+    @media screen and (max-width: 757px) {
+        .grid-container{
+            grid-template-columns: auto auto ;
+
+        }
+        .inline{
+            left: 0;
+        }
+        ul li.item{
+            display: none;  
+        }
+        ul li.home{
+            border-right: 0px;
+        }
+        ul li.bar{
+            display: inline-block;
+            background-color: transparent;
+            border-right: 1px solid rgb(0, 86, 177);
+            border-top: 1px solid rgb(0, 86, 177);
+            border-bottom: 1px solid rgb(0, 86, 177);
+            border-left: 0px;
+        }
+        ul li.bar i{
+            font-size: 15px;
+        }
+        .bars i:hover .hov{
+            display: block;
+        }
+    }
+    @media screen and (max-width: 567px) {
+        body{
+            height: 100%;
+        }
+
+        .grid-container{
+            grid-template-columns: auto ;
+        }
+        .grid_item{
+            padding-right: 120px;
+        }
+        .inline{
+            padding-right: 120px;
+
+        }
+    }
+    
+</style>
+<script src="https://kit.fontawesome.com/ec46d9c2b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <center>
+            <ul>
+                <li class="home" ><a href="#" >Home</a></li>
+                <li class="item"><a href="" title="Algebra">Algebra</a></li>
+                <li class="item"><a href="" title="Data">Data</a></li>
+                <li class="item"><a href="" title="Geometry">Geometry</a></li>
+                <li class="item"><a href="" title="Numbers">Numbers</a></li>
+                <li class="item"><a href="" title="Physics">Physics</a></li>
+                <li class="item"><a href="" title="Dictionary">Dictionary</a></li>
+                <li class="item"><a href="" title="Games">Games</a></li>
+                <li class="item"><a href="" title="Puzzels">Puzzels</a></li>
+                <li class="bar"><i class="fa-solid fa-bars"></i></li>
+            </ul>
+            <div class="hov">
+                <span><a href="" title="Algebra">Algebra</a></span>
+                <span><a href="" title="Data">Data</a></span>
+                <span><a href="" title="Geometry">Geometry</a></span>
+                <span><a href="" title="Numbers">Numbers</a></span>
+                <span><a href="" title="Physics">Physics</a></span>
+                <span><a href="" title="Dictionary">Dictionary</a></span>
+                <span><a href="" title="Games">Games</a></span>
+                <span><a href="" title="Puzzels">Puzzels</a></span>
+            </div>
+
+    
+            <div class="magnifier">
+            <input type="Search" placeholder="Type to Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </center>
+    </nav>
+
+    <div class="grid-container">
+
+            <div class="grid_item">Index</div>
+            <div class="grid_item">Data</div>
+            <div class="grid_item">Geometry</div>
+            <div class="grid_item">Numbers</div>
+            <div class="grid_item">Puzzels</div>
+            <div class="grid_item">Money</div>      
+            <div class="grid_item">Algebra</div>      
+            <div class="grid_item">Calculus</div>
+            <div class="grid_item">Physics</div>      
+            <div class="grid_item">Games</div>      
+            <div class="grid_item">Dictionary</div>      
+            <div class="grid_item">Worksheets</div> 
+            <div class="inline">
+                <div class="grid_item1">Measurements</div>       
+            </div>
+            <div class="inline">
+                <div class="grid_item1">Activities</div>       
+            </div>  
+
+        </div>
+</body>
+</html>
